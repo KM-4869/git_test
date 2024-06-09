@@ -287,7 +287,7 @@ void MatrixScalarMultiply(const double C, const int m, const int n, const double
 
 /*******************************************************************************
 
-在三维空间内输入三个旋转角 和矩阵排列顺序，得到一个旋转矩阵C。order由1-6分别对应
+
 
   XYZ   XZY   YXZ   YZX   ZXY   ZYX   
 
@@ -321,13 +321,31 @@ void RotateMatrix(double x_angle,double y_angle,double z_angle,int order,double 
 	case 5:MatrixMultiply(3, 3, 3, 3, Z, X, T);
 		MatrixMultiply(3, 3, 3, 3, T, Y, C);
 		break;
-	case 6:MatrixMultiply(3, 3, 3, 3, Z, Y, T);
-		MatrixMultiply(3, 3, 3, 3, T, X, C);
-		break;
+	//case 6:MatrixMultiply(3, 3, 3, 3, Z, Y, T);
+		//MatrixMultiply(3, 3, 3, 3, T, X, C);
+		//break;
 	default:
 		break;
 	}
 	
 
+	
+}
+
+
+/****************************
+
+增加函数
+
+
+******************************/
+
+double sum()
+{
+
+}
+
+double multify(double k, double d)
+{
 
 }
